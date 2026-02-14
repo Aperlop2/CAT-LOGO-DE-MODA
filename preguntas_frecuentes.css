@@ -1,0 +1,104 @@
+/* ===== FAQ HERO ===== */
+.faq-hero{
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 1 50px; /* espacio por el navbar fijo */
+  background-image: url("img/preguntas_frecuentes.png"); /* <-- cambia esto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.faq-overlay{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.35);
+}
+
+.faq-wrap{
+  position: relative;
+  z-index: 1;
+}
+
+.faq-title{
+  color:#fff;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 300;
+  margin: 140px 0 40px;  /* baja el título como tu ejemplo */
+  text-align: center;
+}
+
+/* Caja del acordeón */
+.faq-box{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Estilo acordeón oscuro */
+#faqAccordion .accordion-item{
+  border: 0;
+  background: transparent;
+  margin-bottom: 18px;
+}
+
+#faqAccordion .accordion-button{
+  background: rgba(55,55,55,.92);
+  color: #fff;
+  border-radius: 16px;
+  padding: 22px 26px;
+  font-size: 20px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+#faqAccordion .accordion-button:focus{
+  box-shadow: none;
+  outline: 2px solid rgba(193,53,132,.35);
+}
+
+/* Quita el icono default de Bootstrap */
+#faqAccordion .accordion-button::after{
+  display: none;
+}
+
+/* Agrega el + a la derecha */
+#faqAccordion .accordion-button{
+  position: relative;
+  padding-right: 70px;
+}
+
+#faqAccordion .accordion-button::before{
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 34px;
+  line-height: 1;
+  opacity: .9;
+}
+
+/* Cuando está abierto, cambia a “–” */
+#faqAccordion .accordion-button:not(.collapsed)::before{
+  content: "–";
+}
+
+/* Contenido desplegado */
+#faqAccordion .accordion-collapse{
+  background: rgba(40,40,40,.92);
+  border-radius: 0 0 16px 16px;
+  margin-top: -12px; /* se “pega” al botón */
+}
+
+#faqAccordion .accordion-body{
+  color: rgba(255,255,255,.9);
+  padding: 20px 26px 24px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .faq-title{ margin: 110px 0 26px; }
+  #faqAccordion .accordion-button{ font-size: 17px; padding: 18px 18px; padding-right: 62px; }
+  #faqAccordion .accordion-button::before{ right: 18px; font-size: 30px; }
+}

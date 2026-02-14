@@ -1,0 +1,132 @@
+.contacto-mapa{
+  padding: 90px 0;
+  background: #fff;
+}
+
+/* contenedor del mapa */
+.mapa-wrap{
+  position: relative;
+  margin-left: auto;
+  width: min(820px, 100%);
+  height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* iframe interactivo */
+.mapa-iframe{
+  width: 200%;
+  height: 200%;
+  border: 0;
+  display: block;
+}
+
+/* botón para abrir en Google Maps */
+.btn-abrir-maps{
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 5;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.70);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-abrir-maps:hover{
+  background: rgba(0,0,0,.85);
+  color: #fff;
+}
+
+/* marco azul detrás */
+.contacto-marco{
+  position: absolute;
+  left: 5px;
+  top: 160px;
+  width: 640px;
+  height: 360px;
+  border: 10px solid #c13584;
+  z-index: 1;
+}
+
+/* tarjeta negra */
+.contacto-card{
+  position: absolute;
+  left: 50px;
+  top: 110px;
+  width: 600px;
+  max-width: calc(100% - 120px);
+  background: #000;
+  color: #fff;
+  padding: 42px 42px;
+  z-index: 2;
+}
+
+.contacto-titulo{
+  margin: 0 0 26px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.contacto-bloque{
+  margin-top: 26px;
+}
+
+.contacto-bloque h5{
+  margin: 0 0 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: none;
+}
+
+.contacto-bloque p{
+  margin: 0;
+  line-height: 1.9;
+  letter-spacing: 4px;
+}
+
+/* redes */
+.contacto-redes{
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.contacto-redes a{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,.08);
+}
+
+.contacto-redes a:hover{
+  background: rgba(255,255,255,.18);
+}
+
+/* responsive: en móvil apila */
+@media (max-width: 992px){
+  .mapa-wrap{
+    height: 380px;
+  }
+  .contacto-marco,
+  .contacto-card{
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contacto-marco{
+    height: 0;
+    border: 0;
+    margin: 18px 0;
+  }
+  .contacto-card{
+    margin-top: 18px;
+    border-radius: 16px;
+  }
+}

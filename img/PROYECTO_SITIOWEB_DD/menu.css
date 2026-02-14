@@ -1,0 +1,70 @@
+/* Fondo negro del menú */
+.offcanvas-dark .offcanvas-body{
+  background: #000000;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.offcanvas-header {
+  background-color: #000;
+}
+
+/* Lista principal */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 0;
+  width: 80%;
+  max-width: 320px; /* ajusta si lo quieres más ancho */
+  text-align: center;
+}
+
+.menu-list li {
+  margin-bottom: 20px;
+}
+
+/* Links principales */
+.menu-list a,
+.menu-dropdown button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-list a:hover,
+.menu-dropdown button:hover {
+  color: #3E0014; /* dorado suave, puedes cambiarlo */
+}
+
+.menu-list a:active,
+.menu-dropdown button:active {
+  color: #ffffff;
+  background-color: rgba(178, 12, 131, 0.15);
+}
+
+/* Submenús */
+.menu-dropdown div a {
+  display: block;
+  border: 1px solid #000000;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  font-size: 1.1rem;
+}
+
+/* Flechita */
+.menu-dropdown span {
+  font-size: 0.9rem;
+}
+
+/* Quitar estilos raros de Bootstrap */
+button:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diseños Daniela</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="donde_nos_ubicamos.css">
+
+    <link rel="icon" type="img/logo.jpeg" href="img/Diseño sin título.png">
+
+  </head>
+  <body>
+
+   <nav class="navbar fixed-top bg-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="img/LOGO_SIN_FONDO (1).png" alt="Diseños Daniela" class="logo-navbar">
+    </a>
+
+    <button class="navbar-toggler border-0 text-white" type="button"
+      data-bs-toggle="offcanvas" data-bs-target="#menuMovil">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end offcanvas-dark" tabindex="-1" id="menuMovil">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white ms-auto"
+          data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="menu-list">
+
+          <li><a href="index.html">Inicio</a></li>
+
+          <li class="menu-dropdown">
+            <button data-bs-toggle="collapse" data-bs-target="#catalogoMenu">
+              Catálogo <span>▾</span>
+            </button>
+            <div id="catalogoMenu" class="collapse">
+              <a href="modelos.html">Nuestros modelos</a>
+            </div>
+          </li>
+
+          <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+
+          <li class="menu-dropdown">
+            <button data-bs-toggle="collapse" data-bs-target="#nosotrosMenu">
+              Sobre nosotros <span>▾</span>
+            </button>
+            <div id="nosotrosMenu" class="collapse">
+              <a href="sobre_nosotros.html">Nuestras clientas</a>
+              <a href="donde_nos_uvicamos.html">Dónde nos ubicamos</a>
+              <a href="sobre_nosotros.html">Nuestro equipo</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contacto-mapa">
+  <div class="container position-relative">
+
+    <!-- MAPA (interactivo) -->
+    <div class="mapa-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4187218354505!2d-99.13830332661988!3d19.43750564052788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92d9451165d%3A0x23aceff3b8aae3d!2sRep%C3%BAblica%20de%20Chile%2030-A%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006010%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1770145355298!5m2!1ses!2smx" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- Botón para abrir Google Maps -->
+      <a
+        class="btn-abrir-maps"
+        href="https://www.google.com/maps/place/Rep%C3%BAblica+de+Chile+30-A,+Centro+Hist%C3%B3rico+de+la+Cdad.+de+M%C3%A9xico,+Centro,+Cuauht%C3%A9moc,+06010+Ciudad+de+M%C3%A9xico,+CDMX/@19.4375056,-99.1383033,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f92d9451165d:0x23aceff3b8aae3d!8m2!3d19.4375006!4d-99.1357284!16s%2Fg%2F11sclct35q?authuser=0&entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener">
+        Abrir en Google Maps
+      </a>
+    </div>
+
+    <!-- Marco azul (detrás de la tarjeta) -->
+    <div class="contacto-marco"></div>
+
+    <!-- Tarjeta negra -->
+    <div class="contacto-card">
+      <h3 class="contacto-titulo">Contáctenos</h3>
+
+      <div class="contacto-bloque">
+        <h5>Direcciones:</h5>
+        <p>
+          República de Chile #30-A <br>
+          Colonia Centro <br>
+          Ciudad de México, Mexico City <br>
+          06010
+        </p>
+      </div>
+
+      <div class="contacto-bloque">
+        <h5>Síguenos:</h5>
+        <div class="contacto-redes">
+          <a href="https://www.facebook.com/DisenosDanielas?locale=es_LA" aria-label="Facebook">f</a>
+          <a href="https://www.tiktok.com/@disenosdaniela1?_r=1&_t=ZS-93XB5eQ49NU" aria-label="tiktok">tt</a>
+          <a href="https://www.instagram.com/disenosdanielas/?hl=es" aria-label="Instagram">ig</a>
+          <a href="https://www.linkedin.com/in/dise%C3%B1os-daniela-b587a83a9/" aria-label="linkedin">ln</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- COLUMNA 1: Dirección -->
+      <div class="col-md-4 footer-col">
+        <h5>Datos de la empresa</h5>
+        <p>
+          República de Chile #30-A <br>
+          Colonia Centro <br>
+          Ciudad de México, Mexico City <br>
+          06010
+        </p>
+      </div>
+
+      <!-- COLUMNA 2: Menú -->
+      <div class="col-md-4 footer-col">
+        <h5>Menú</h5>
+        <ul class="footer-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="modelos.html">Catálogo</a></li>
+          <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 3: Equipo / Contacto -->
+      <div class="col-md-4 footer-col">
+        <h5>¿Quieres formar parte de nuestro equipo?</h5>
+        <p>
+          disenosdaniela1@gmail.com <br>
+          55 5510 3960
+          55 2931 6177
+        </p>
+
+       
+      </div>
+
+    </div>
+
+    <!-- Logo abajo -->
+     <!-- LOGO + REDES ABAJO ALINEADOS -->
+<div class="footer-bottom">
+  <div class="footer-logo">
+    <img src="img/LOGO_SIN_FONDO (1).png" alt="Diseños Daniela">
+  </div>
+
+  <div class="footer-social footer-social-bottom">
+    <a href="https://www.facebook.com/DisenosDanielas?locale=es_LA" class="social fb">f</a>
+    <a href="https://www.instagram.com/disenosdanielas/?hl=es" class="social ig">i</a>
+    <a href="https://www.linkedin.com/in/dise%C3%B1os-daniela-b587a83a9/" class="social in">in</a>
+    <a href="https://www.tiktok.com/@disenosdaniela1?_r=1&_t=ZS-93XB5eQ49NU" class="social tt">tt</a>
+  </div>
+</div>
+
+</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

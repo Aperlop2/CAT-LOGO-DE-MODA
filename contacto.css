@@ -1,0 +1,230 @@
+body{
+  padding-top: 90px; /* igual o un poco mayor al alto del navbar */
+}
+
+/* Fondo con imagen */
+.contacto-hero{
+  min-height: 100vh;
+  position: relative;
+  padding-top: 60px;    /* para que no lo tape el navbar fijo */
+  padding-bottom: 700px; /* igual a la altura del panel */
+  background-image: url("img/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* oscurecer un poco el fondo para que se vea elegante */
+.contacto-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.25);
+}
+.contacto-hero .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjetas */
+.contacto-cards{
+  position: relative;
+  margin-top: 120px;     /* baja desde la imagen */
+  margin-bottom: 10px;  /* las encima con el panel negro */
+  z-index: 3;
+  top: 0;                /* QUITA el top: 30vh */
+}
+
+.info-card{
+  background:#fff;
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align:center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+  height: 100%;
+}
+
+.info-icon{
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.info-card h6{
+  font-weight: 800;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.info-card p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info-card a{
+  color:#c13584;
+  text-decoration: none;
+}
+.info-card a:hover{ text-decoration: underline; }
+
+/* Bloque negro */
+.contacto-panel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: auto;
+  min-height: 60vh;  /* mantiene la idea de “media pantalla”, pero permite crecer */
+
+  width: 100%;
+  background: #000;
+
+  padding: 140px 0 60px;  
+  z-index: 2;
+  display: flex;
+  align-items: center;  /* centra verticalmente dentro del panel */
+}
+
+
+
+/* Inputs estilo “blanco sobre negro” */
+.form-dark{
+  border-radius: 0;
+  border: 0;
+  height: 40px;
+}
+
+.form-dark:focus{
+  box-shadow: none;
+  outline: 2px solid rgba(193,53,132,.45);
+}
+
+textarea.form-dark{
+  height: 180px;   /* antes auto, ahora controlado */
+  resize: none;    /* opcional: evita que lo estiren */
+}
+
+/* botón */
+.btn-send{
+  background: #7a0c3a;
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border: 0;
+}
+.btn-send:hover{
+  background:#5f092d;
+  color:#fff;
+}
+
+/* Texto derecha */
+.contacto-title{
+  color:#fff;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.contacto-lead{
+  color:#fff;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.contacto-text{
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+}
+
+/* Redes */
+.contacto-social{
+  margin-top: 22px;
+  display:flex;
+  gap: 22px;
+  align-items:center;
+}
+.contacto-social a{
+  color:#c13584;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 800;
+}
+.contacto-social a:hover{
+  color:#ff4aa2;
+}
+
+/* mensaje de éxito */
+#formMsg .alert{
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* Reduce el formulario */
+.contact-form{
+  max-width: 520px;   /* prueba 520; si lo quieres más pequeño baja a 460 */
+}
+
+.btn-send-sm{
+  width: min(520px, 100%);
+  display: block;
+  margin: 8px auto 0; /* centrado */
+}
+
+.contact-form .form-label{
+  color: rgba(255,255,255,.55);
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE REAL (móvil/tablet)
+   ========================= */
+@media (max-width: 991.98px){
+
+  /* La sección no necesita reservar 700px en móvil */
+  .contacto-hero{
+    padding-bottom: 40px; /* en móvil ya no reservamos “a lo bruto” */
+  }
+
+  /* El panel negro ya no va absoluto, para que no se encime */
+  .contacto-panel{
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    min-height: auto;
+    height: auto;
+
+    padding: 50px 0;     /* más compacto */
+    display: block;      /* quitamos flex para evitar rarezas */
+  }
+
+  /* Las tarjetas ya no necesitan “jugar” con márgenes */
+  .contacto-cards{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Título más pequeño en móvil */
+  .contacto-title{
+    font-size: 32px;
+  }
+
+  /* Form ocupa todo el ancho disponible */
+  .contact-form{
+    max-width: 100%;
+  }
+
+  /* Textarea un poco más bajo para que no se haga enorme */
+  textarea.form-dark{
+    height: 160px;
+  }
+}
+
+
+

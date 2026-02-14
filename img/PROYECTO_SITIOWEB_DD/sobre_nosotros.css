@@ -1,0 +1,70 @@
+/* ===== QUIÉNES SOMOS ===== */
+.about-hero{
+  padding-top: 180px;   /* 👈 ESPACIO con navbar fijo */
+  padding-bottom: 120px;
+  background: #fff;
+}
+
+/* filas */
+.about-row{
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 140px;
+}
+
+/* invierte imagen/texto */
+.about-row.reverse{
+  flex-direction: row-reverse;
+}
+
+/* imagen */
+.about-img{
+  flex: 1;
+}
+
+.about-img img{
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+/* texto */
+.about-text{
+  flex: 1;
+}
+
+.about-text h2{
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.about-text p{
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  max-width: 480px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px){
+  .about-row,
+  .about-row.reverse{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-img img{
+    height: 420px;
+  }
+
+  .about-text h2{
+    font-size: 34px;
+  }
+
+  .about-hero{
+    padding-top: 200px; /* más espacio en móvil */
+  }
+}

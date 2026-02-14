@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diseños Daniela</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" type="img/logo.jpeg" href="img/Diseño sin título.png">
+  </head>
+  <body>
+
+   <nav class="navbar fixed-top bg-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="img/LOGO_SIN_FONDO (1).png" alt="Diseños Daniela" class="logo-navbar">
+    </a>
+
+    <button class="navbar-toggler border-0 text-white" type="button"
+      data-bs-toggle="offcanvas" data-bs-target="#menuMovil">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end offcanvas-dark" tabindex="-1" id="menuMovil">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white ms-auto"
+          data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="menu-list">
+
+          <li><a href="index.html">Inicio</a></li>
+
+          <li class="menu-dropdown">
+            <button data-bs-toggle="collapse" data-bs-target="#catalogoMenu">
+              Catálogo <span>▾</span>
+            </button>
+            <div id="catalogoMenu" class="collapse">
+              <a href="modelos.html">Nuestros modelos</a>
+            </div>
+          </li>
+
+          <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+
+          <li class="menu-dropdown">
+            <button data-bs-toggle="collapse" data-bs-target="#nosotrosMenu">
+              Sobre nosotros <span>▾</span>
+            </button>
+            <div id="nosotrosMenu" class="collapse">
+              <a href="sobre_nosotros.html">Nuestras clientas</a>
+              <a href="donde_nos_uvicamos.html">Dónde nos ubicamos</a>
+              <a href="sobre_nosotros.html">Nuestro equipo</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <!-- CONTENIDO FIJO (NO SE MUEVE) -->
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+
+    <div class="hero-logo-wrap">
+      <img src="img/logo_blanco.png" alt="Diseños Daniela" class="hero-logo">
+    </div>
+
+    <div class="hero-subtitle-wrap">
+      <p class="hero-subtitle">
+        Vestidos con cada detalle especial para un día inolvidable
+      </p>
+    </div>
+
+    <div class="hero-btn-wrap">
+      <a href="modelos.html" class="hero-btn">VER CATÁLOGO</a>
+    </div>
+
+  </div>
+  <!-- CARRUSEL (SOLO IMÁGENES) -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="img/carrusel5.jpg" alt="">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/carrusel2.jpg" alt="">
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/carrusel3.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="galeria-section">
+
+  <h2 class="galeria-title">Nuestra galería</h2>
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide hero-video" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active" data-bs-interval="8000">
+      <video class="d-block w-100 hero-video-media" autoplay muted loop playsinline preload="metadata">
+        <source src="video/video1.mp4" type="video/mp4">
+      </video>
+
+      <!-- BOTÓN SONIDO -->
+        <button type="button" class="mute-toggle" aria-label="Activar o desactivar sonido" aria-pressed="false">
+          <!-- icono bocina apagada (por defecto porque inicia muted) -->
+          <span class="icon-off" aria-hidden="true">🔇</span>
+          <span class="icon-on" aria-hidden="true">🔊</span>
+        </button>
+
+      <div class="carousel-caption d-none d-md-block">   
+      </div>
+    </div>
+
+
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-item" data-bs-interval="8000">
+      <video class="d-block w-100 hero-video-media" autoplay muted loop playsinline preload="metadata">
+        <source src="video/video2.mp4" type="video/mp4">
+      </video>
+      <!-- BOTÓN SONIDO -->
+        <button type="button" class="mute-toggle" aria-label="Activar o desactivar sonido" aria-pressed="false">
+          <!-- icono bocina apagada (por defecto porque inicia muted) -->
+          <span class="icon-off" aria-hidden="true">🔇</span>
+          <span class="icon-on" aria-hidden="true">🔊</span>
+        </button>
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="carousel-item" data-bs-interval="8000">
+      <video class="d-block w-100 hero-video-media" autoplay muted loop playsinline preload="metadata">
+        <source src="video/video3.mp4" type="video/mp4">
+      </video>
+      <!-- BOTÓN SONIDO -->
+        <button type="button" class="mute-toggle" aria-label="Activar o desactivar sonido" aria-pressed="false">
+          <!-- icono bocina apagada (por defecto porque inicia muted) -->
+          <span class="icon-off" aria-hidden="true">🔇</span>
+          <span class="icon-on" aria-hidden="true">🔊</span>
+        </button>
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</section>
+
+<section class="galeria-grid-section">
+  <div class="container">
+
+    <div class="row g-4">
+      <!-- ITEM 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria1.jpg" alt="Galería 1" class="img-fluid">
+        </a>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria2.jpg" alt="Galería 2" class="img-fluid">
+        </a>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria3.jpg" alt="Galería 3" class="img-fluid">
+        </a>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria4.jpg" alt="Galería 4" class="img-fluid">
+        </a>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria5.jpg" alt="Galería 5" class="img-fluid">
+        </a>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="#" class="galeria-item">
+          <img src="img/galeria6.jpg" alt="Galería 6" class="img-fluid">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- COLUMNA 1: Dirección -->
+      <div class="col-md-4 footer-col">
+        <h5>Datos de la empresa</h5>
+        <p>
+          República de Chile #30-A <br>
+          Colonia Centro <br>
+          Ciudad de México, Mexico City <br>
+          06010
+        </p>
+      </div>
+
+      <!-- COLUMNA 2: Menú -->
+      <div class="col-md-4 footer-col">
+        <h5>Menú</h5>
+        <ul class="footer-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="modelos.html">Catálogo</a></li>
+          <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 3: Equipo / Contacto -->
+      <div class="col-md-4 footer-col">
+        <h5>¿Quieres formar parte de nuestro equipo?</h5>
+        <p>
+          disenosdaniela1@gmail.com <br>
+          55 5510 3960
+          55 2931 6177
+        </p>
+
+       
+      </div>
+
+    </div>
+
+    <!-- Logo abajo -->
+     <!-- LOGO + REDES ABAJO ALINEADOS -->
+<div class="footer-bottom">
+  <div class="footer-logo">
+    <img src="img/LOGO_SIN_FONDO (1).png" alt="Diseños Daniela">
+  </div>
+
+  <div class="footer-social footer-social-bottom">
+    <a href="https://www.facebook.com/DisenosDanielas?locale=es_LA" class="social fb">f</a>
+    <a href="https://www.instagram.com/disenosdanielas/?hl=es" class="social ig">i</a>
+    <a href="https://www.linkedin.com/in/dise%C3%B1os-daniela-b587a83a9/" class="social in">in</a>
+    <a href="https://www.tiktok.com/@disenosdaniela1?_r=1&_t=ZS-93XB5eQ49NU" class="social tt">tt</a>
+  </div>
+</div>
+
+</footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+
+  </body>
+</html>

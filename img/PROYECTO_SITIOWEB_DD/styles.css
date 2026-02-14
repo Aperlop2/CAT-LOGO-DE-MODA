@@ -1,0 +1,219 @@
+.logo-navbar {
+  height: 40px;       /* ajusta si lo quieres más grande */
+  width: auto;
+}
+
+.hero { 
+  padding-top: 80px; /* ajusta según el alto de tu navbar */ 
+}
+
+/* 3) Altura del carrusel (para que no sea gigantesco) */
+.hero .carousel, 
+.hero .carousel-inner, 
+.hero .carousel-item { 
+  height: 80vh; /* ajusta: 60vh, 70vh, etc. */ 
+  min-height: 470px; /* opcional para pantallas grandes */ 
+}
+
+.hero .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* llena sin barras */
+  object-position: center 20%; /* sube el encuadre (evita cortar arriba) */
+  display: block;
+}
+
+
+/* CAPA OSCURA TRANSPARENTE */
+.hero-overlay {
+  position: absolute;
+  top: 80px;              /* 👈 empieza debajo del navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;   /* 👈 CLAVE: deja pasar clics */
+}
+
+/* CONTENIDO ENCIMA */
+.hero-content {
+  position: absolute;
+  top: 80px;         /* 👈 igual que el overlay */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 100px;
+  color: #fff;
+}
+
+.hero-btn {
+  background-color: #5a0f2e;
+  color: #fff;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-btn-wrap{
+  margin-top: 10px;        /* 👈 sube/baja SOLO el botón */
+}
+
+
+.hero-btn:hover {
+  background-color: #7a1f3d;
+  color: #fff;
+}
+
+/* logo grande */
+.hero-logo {
+  width: min(420px, 75%); /* ajusta aquí tamaño */
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+}
+
+.hero-subtitle{
+  margin: 1;                /* ✅ tu "margin: 2;" estaba mal */
+  max-width: 700px;
+  font-size: 18px;
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+.hero-subtitle-wrap{
+  margin-top: -120px;        /* 👈 sube/baja SOLO el subtítulo */
+}
+
+.hero-logo-down{
+  margin-top: -40px;   /* 👈 baja SOLO el logo */
+}
+
+/* Alto tipo hero */
+.hero-video .carousel-inner,
+.hero-video .carousel-item {
+  height: 90vh;      /* antes 80vh */
+  min-height: 600px; /* antes 470px */
+}
+
+/* Video ocupa todo el slide */
+.hero-video-media {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;      /* llena el espacio recortando */
+  object-position: center top;/* centra el video */
+  display: block;
+  background: #fffdfd;       /* por si tarda en cargar */
+}
+
+.galeria-section {
+  padding: 80px 0;   /* espacio arriba y abajo */
+}
+
+/* TÍTULO */
+.galeria-title {
+  text-align: center;
+  margin-bottom: 40px; /* separa el texto del carrusel */
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Para poder posicionar el botón sobre el video */
+.hero-video .carousel-item {
+  position: relative;
+}
+
+/* Botón bocina */
+.mute-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 5;
+
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+/* Hover suave */
+.mute-toggle:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/* Mostrar solo un icono según estado */
+.mute-toggle .icon-on { display: none; }
+.mute-toggle.is-unmuted .icon-off { display: none; }
+.mute-toggle.is-unmuted .icon-on { display: inline; }
+
+.galeria-grid-section{
+  padding: 80px 0;
+}
+
+.galeria-title{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* contenedor de cada imagen */
+.galeria-item{
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;             /* IMPORTANTÍSIMO para que el zoom no se salga */
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+/* imagen */
+.galeria-item img{
+  width: 100%;
+  height: 260px;                /* ajusta la altura si quieres */
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+/* zoom al hover */
+.galeria-item:hover img{
+  transform: scale(1.06);
+}
+
+/* opcional: un ligero oscurecido al hover (se ve pro) */
+.galeria-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0);
+  transition: background .35s ease;
+}
+
+.galeria-item:hover::after{
+  background: rgba(0,0,0,0.10);
+}
+
+/* en móvil reduce altura */
+@media (max-width: 576px){
+  .galeria-item img{ height: 220px; }
+  .galeria-grid-section{ padding: 55px 0; }
+  .galeria-title{ font-size: 1.8rem; margin-bottom: 25px; }
+}
+
